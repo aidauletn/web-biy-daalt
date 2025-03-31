@@ -1,5 +1,8 @@
+'use client'
 import React,{ useState } from "react"; 
+import { useRouter } from "next/navigation";
 const useStateTask = () => {
+    const router = useRouter();
     const [color , setColor] = useState("black");
     return(
         <div className = {`flex flex-col justify-center items-center space-x-4 w-full h-screen bg-${color}-800`}>
@@ -55,7 +58,7 @@ const useStateTask = () => {
                   Ногоон
               </button></>
             )
-}
+        }
         </div>
     );
 };
